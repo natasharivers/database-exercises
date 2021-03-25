@@ -8,11 +8,12 @@ LIMIT 10;
 -- #3 Find all previous or current employees hired in the 90s and born on Christmas.
 select *
 from employees
-where hire_date like '199%' and birth_date like '%-12-25' 
+where hire_date like '199%' 
+and birth_date like '%-12-25' 
 -- Find the first 5 employees hired in the 90's by sorting by hire date and limiting your results to the first 5 records. 
 select *
 from employees
-where hire_date like '199%' and birth_date like '%-12-25'
+where hire_date like '199%' 
 order by hire_date
 limit 5;
 -- Write a comment in your code that lists the five names of the employees returned.
