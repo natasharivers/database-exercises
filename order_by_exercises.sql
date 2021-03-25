@@ -15,7 +15,7 @@ where first_name in ('Irena', 'Vidya', 'Maya')
 	order by first_name, last_name;
 
 -- #4 Find all employees with first names 'Irena', 'Vidya', or 'Maya', and order your results returned by last name and then first name.  (709 Returns)
--- What was the first and last name in the first row of the results? Acton, Irene
+-- What was the first and last name in the first row of the results? Acton, Irena
 -- What was the first and last name of the last person in the table? Zweizig, Vidya
 select first_name, last_name
 from employees
@@ -24,9 +24,9 @@ where first_name in ('Irena', 'Vidya', 'Maya')
 
 -- #5 Write a query to to find all employees whose last name starts and ends with 'E'. Sort the results by their employee number. 
 -- the number of employees returned (899 returns)
--- the first employee number and their first and last name (10021- Erde)
--- the last employee number with their first and last name (499648- Erde)
-select last_name, emp_no
+-- the first employee number and their first and last name (10021- Erde, Ramzi)
+-- the last employee number with their first and last name (499648- Erde, Tadahiro)
+select last_name, first_name, emp_no
 from employees
 where last_name like 'e%'and last_name like '%e'
 	order by emp_no;
