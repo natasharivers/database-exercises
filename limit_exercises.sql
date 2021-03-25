@@ -22,9 +22,9 @@ limit 5;
 -- #4 Update the query to find the tenth page of results.
 select *
 from employees
-where hire_date like '199%' and birth_date like '%-12-25'
+where hire_date like '199%'
 order by hire_date
-limit 5 offset 50;
+limit 5 offset 45;
 -- What is the relationship between OFFSET (number of results to skip), LIMIT (number of results per page), and the page number?
 -- Offset is the number you begin at - on the very next line, (ex) offset 20- starts on 21, 
 -- limit is the quantity of returns you want, 
