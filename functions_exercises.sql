@@ -21,7 +21,14 @@ WHERE hire_date LIKE '199%'
 AND birth_date LIKE '%-12-25';
 
 --Use datediff() function to find how many days they have been working at the company 
-SELECT datediff(now(), hire_date) FROM employees
+SELECT datediff(now(), hire_date) 
+FROM employees
+
+--or 
+SELECT datediff(now(), hire_date) 
+FROM employees
+WHERE hire_date LIKE '199%'
+AND birth_date LIKE '%-12-25'
 
 -- #5 Find the smallest and largest current salary from the salaries table.
 SELECT MAX(salary) FROM salaries; --(158220)
