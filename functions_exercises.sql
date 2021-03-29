@@ -44,5 +44,4 @@ SELECT MAX(salary), min(salary) FROM salaries;
 -- the month the employee was born, and the last two digits of the year that they were born.
 select concat(lower(substr(first_name, 1, 1)), lower(substr(last_name, 1,4)), '_', substr(birth_date, 6,2), substr(birth_date, 3,2)) 
 as username , first_name, last_name, birth_date
-from employees
-limit 10;
+from employees;
