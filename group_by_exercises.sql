@@ -55,7 +55,7 @@ GROUP BY username
 HAVING total_count > 1;
 
 -- Are there any duplicate usernames? 
--- YES
+-- YES 
 
 --BONUS: How many duplicate usernames are there?
--- 6 total duplicates
+-- 13251
