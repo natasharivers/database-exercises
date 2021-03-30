@@ -10,10 +10,10 @@ WHERE last_name LIKE 'e%e'
 GROUP BY last_name;
 
 -- #4 Write a query to to find all unique combinations of first and last names of all employees whose last names start and end with 'E'.
-SELECT last_name, first_name
+SELECT first_name, last_name
 FROM employees
 WHERE last_name LIKE 'e%e'
-GROUP BY last_name, first_name;
+GROUP BY first_name, last_name;
 
 -- #5 Write a query to find the unique last names with a 'q' but not 'qu'. Include those names in a comment in your sql code.
 SELECT last_name
@@ -49,9 +49,9 @@ substr(last_name, 1,4),
 '_', 
 substr(birth_date, 6,2), 
 substr(birth_date, 3,2))) 
-AS username, first_name, last_name, birth_date
+AS username
 FROM employees
-GROUP BY username, first_name, last_name, birth_date
+GROUP BY username
 HAVING total_count > 1;
 
 -- Are there any duplicate usernames? 
