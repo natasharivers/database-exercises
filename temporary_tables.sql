@@ -5,9 +5,9 @@ CREATE TEMPORARY TABLE employees_with_departments(
 -- #1a  Add a column named full_name to this table. It should be a VARCHAR whose length is the sum of the lengths of the first name and last name columns
 INSERT INTO employees_with_departments(n) VALUES (1), (2), (3), (4);
 
-ALTER TABLE employees_with_departments ADD first_name VARCHAR(100);
-ALTER TABLE employees_with_departments ADD last_name VARCHAR(100);
-ALTER TABLE employees_with_departments ADD full_name VARCHAR(100);
+ALTER TABLE employees_with_departments ADD first_name VARCHAR(14);
+ALTER TABLE employees_with_departments ADD last_name VARCHAR(16);
+ALTER TABLE employees_with_departments ADD full_name VARCHAR(30);
 
 -- #1b Update the table so that full name column contains the correct data
 UPDATE employees_with_departments
@@ -18,4 +18,13 @@ ALTER TABLE employees_with_departments DROP COLUMN first_name;
 ALTER TABLE employees_with_departments DROP COLUMN last_name;
 
 --#1d What is another way you could have ended up with this same table?
+-- ?
+
+
+SELECT employees.employees.first_name,
+	employees.employees.last_name
+FROM employees.employees;
+
+-- #2 Create a temporary table based on the payment table from the sakila database.
+
 
