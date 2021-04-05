@@ -78,7 +78,7 @@ SELECT salary,
             WHEN dept_name IN ('research', 'development') THEN 'R&D'
             WHEN dept_name IN ('sales', 'marketing') THEN 'Sales & Marketing' 
             WHEN dept_name IN ('Production', 'Quality Management') THEN 'Prod & QM'
-            WHEN dept_name IN ('Customer Service', '?') THEN 'Customer Service' 
+            WHEN dept_name IN ('Customer Service') THEN 'Customer Service' 
             WHEN dept_name IN ('Finance', 'Human Resources') THEN 'Finance & HR'
             ELSE dept_name
             END AS dept_group
