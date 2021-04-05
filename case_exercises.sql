@@ -88,3 +88,19 @@ FROM departments
     JOIN salaries ON employees.emp_no = salaries.emp_no
 ORDER BY salary DESC;
 --find average salary
+
+SELECT AVG(salary) AS average_salary,
+        CASE 
+            WHEN dept_name IN ('research', 'development') THEN 'R&D'
+            WHEN dept_name IN ('sales', 'marketing') THEN 'Sales & Marketing' 
+            WHEN dept_name IN ('Production', 'Quality Management') THEN 'Prod & QM'
+            WHEN dept_name IN ('Customer Service') THEN 'Customer Service' 
+            WHEN dept_name IN ('Finance', 'Human Resources') THEN 'Finance & HR'
+            ELSE dept_name
+            END AS dept_group
+FROM departments
+    JOIN dept_emp ON departments.dept_no = dept_emp.dept_no
+    JOIN employees ON dept_emp.emp_no = employees.emp_no
+    JOIN salaries ON employees.emp_no = salaries.emp_no
+GROUP BY dept_name
+ORDER BY average_salary DESC;
