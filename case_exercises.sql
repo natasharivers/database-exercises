@@ -2,12 +2,6 @@
 -- their start date, their end date, and a new column 'is_current_employee' 
 -- that is a 1 if the employee is still with the company and 0 if not.
 SELECT *,
-	to_date = '9999-01-01' AS is_current_employee
-FROM dept_emp;
-
---OR--
-
-SELECT *,
 	CASE to_date
 		WHEN '9999-01-01' THEN 1
 		ELSE 0
@@ -28,7 +22,7 @@ group by emp_no;
  	CASE
  		WHEN last_name BETWEEN 'a%' AND 'i%' THEN 'A_H_last_name'
  		WHEN last_name BETWEEN 'i%'AND 'r%' THEN 'I_Q_last_name'
- 		WHEN last_name BETWEEN 'r%' AND 'za%' THEN 'R-Z_last_name'
+ 		WHEN last_name BETWEEN 'r%' AND 'zz%' THEN 'R-Z_last_name'
  		ELSE 'other'
  		END AS alpha_group
  	FROM employees;
