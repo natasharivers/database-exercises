@@ -37,8 +37,8 @@ group by emp_no;
 
  SELECT last_name,
  	CASE
- 		WHEN substr(last_name, 1,1) BETWEEN 'a' AND 'i' THEN 'A_H_last_name'
- 		WHEN substr(last_name, 1,1) BETWEEN 'i'AND 'r' THEN 'I_Q_last_name'
+ 		WHEN substr(last_name, 1,1) BETWEEN 'a' AND 'h' THEN 'A_H_last_name'
+ 		WHEN substr(last_name, 1,1) BETWEEN 'i'AND 'q' THEN 'I_Q_last_name'
  		WHEN substr(last_name, 1,1) BETWEEN 'r' AND 'z' THEN 'R-Z_last_name'
  		ELSE 'other'
  		END AS alpha_group
@@ -87,4 +87,4 @@ FROM departments
     JOIN employees ON dept_emp.emp_no = employees.emp_no
     JOIN salaries ON employees.emp_no = salaries.emp_no
 ORDER BY salary DESC;
---find average asalary
+--find average salary
