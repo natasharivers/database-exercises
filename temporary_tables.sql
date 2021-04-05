@@ -37,13 +37,13 @@ FROM sakila.payment;
 SELECT sakila.payment.amount
 FROM sakila.payment;
 
-ALTER TABLE Kila
+ALTER TABLE payments_from_Sakila
 MODIFY COLUMN amount DECIMAL(7,2);
 
-UPDATE Kila
+UPDATE payments_from_Sakila
 set amount = amount*100;
 
-ALTER TABLE Kila
+ALTER TABLE payments_from_Sakila
 MODIFY COLUMN amount INT;
 
 --#3 Find out how the current average pay in each department compares to the overall, historical average pay. 
