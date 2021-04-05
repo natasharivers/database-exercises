@@ -47,7 +47,7 @@ SELECT title AS Title, count(*) AS Count
 FROM departments
     JOIN dept_emp ON departments.dept_no = dept_emp.dept_no
     JOIN employees ON dept_emp.emp_no = employees.emp_no
-    OIN titles ON employees.emp_no = titles.emp_no
+    JOIN titles ON employees.emp_no = titles.emp_no
 WHERE dept_name LIKE 'Customer Service' AND dept_emp.to_date LIKE '9999%' AND titles.to_date LIKE '9999%'
 GROUP BY title;
 
